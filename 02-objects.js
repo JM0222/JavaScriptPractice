@@ -50,6 +50,7 @@ m1.sayHi = function(){
 }
 m1.sayHi();
 
+//-----------------------------------------------------------------------
 console.log("m1의 생성객체: ", m1.constructor); // m1을 생성한 생성 객체 확인
 // 동일 객체는 prototype 이라는 공유 영역을 가지고 있다
 // 이 객체를 이용 ,인스턴스화한 모든 인스턴스에 동일한 속성 공유 가능
@@ -59,3 +60,7 @@ Member.prototype.introduce = function(){
     console.log("position :" + this.position);
 }
 console.log(Member.prototype);
+m1.introduce();
+m2.introduce();
+
+// prototype 영역과 동적 속성을 활용하면 기존 객체들에도 동적 속성 추가 가능
