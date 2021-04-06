@@ -28,3 +28,38 @@ console.log(num);
 num.shift() // 0번인덱스 추출후 삭제 
 console.log(num);
 
+// Array 주요 메서드 
+// splice 원하는 위치의 요소를 삭제하거나 추가하는 메서드
+let fruits = ['banana','apple','kiwi','mango'];
+console.log(fruits);
+// 인수가 1개 - 해당 인덱스부터 끝까지 추출후 삭제
+fruits.splice(2);
+console.log(fruits);
+// 인수가 2개 - 시작 인덱스 , 갯수 -> 추출후 삭제
+fruits = ['banana','apple','kiwi','mango'];
+fruits.splice(0,2);
+console.log(fruits);
+// 인수가 3개 - 시작 인덱스 , 갯수 , 추가할 아이템들
+fruits = ['banana','apple','kiwi','mango'];
+fruits.splice(2,1,'melon','cherry');
+console.log(fruits);
+// reverse, sort, slice (마지막 인덱스 -1)
+fruits = ['banana','apple','kiwi','mango'];
+let slices = fruits.slice(1,3);
+console.log(slices); // apple, kiwi
+
+// split - string 특정 구분자 기준으로 분리후 배열로 반환
+const str = "JavaScript is something strange than other languages";
+let chunks = str.split(" ");
+console.log(chunks);
+
+// Date 
+// Date(year, month, day) / Date(yyyy,mm,dd,hh,mi,ss)
+// Date(milliseconds)
+let now = new Date();
+console.log(now);
+
+let past = new Date(1999,11,31);
+console.log(past);
+// getMonth, getYear , getDate
+console.log("month: ", now.getMonth() + 1);
